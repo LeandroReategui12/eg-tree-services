@@ -30,7 +30,7 @@ export default function Header() {
       <nav className="nav" aria-label="Primary">
         <div className="container nav__inner">
           <Link className="nav__brand" to="/" aria-label="EG Tree Services LLC home" onClick={closeMenu}>
-            <img src={LOGO} alt="EG Tree Services LLC" width="180" height="119" />
+            <img src={LOGO} alt="EG Tree Services LLC" width="180" height="136" />
           </Link>
 
           <button

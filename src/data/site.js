@@ -1,5 +1,5 @@
 export const BASE = "https://egtreeservicesllc.com/wp-content/uploads";
-export const LOGO = `${BASE}/2020/08/EG-Tree-Services-LLC-Logo.png`;
+export const LOGO = "/logo.png";
 export const PHONE = "(281) 676-0474";
 export const PHONE_HREF = "tel:+12816760474";
 export const EMAIL = "egtreeservicesllc19@yahoo.com";

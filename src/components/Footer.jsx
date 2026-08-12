@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container footer__grid">
         <div>
           <Link className="footer__brand" to="/">
-            <img src={LOGO} alt="EG Tree Services LLC" width="160" height="105" />
+            <img src={LOGO} alt="EG Tree Services LLC" width="160" height="121" />
           </Link>
           <p>Your premier destination for top-notch tree care solutions in Cleveland.</p>
         </div>
