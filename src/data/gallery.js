@@ -1,3 +1,5 @@
+export { default as galleryItems } from "./galleryItems.json";
+
 export const BEFORE_AFTER = [
   {
     id: "flower-bed-stone-porch",
@@ -22,22 +24,12 @@ export const BEFORE_AFTER = [
   },
 ];
 
-/** Local job photos used on Projects (subset of organized service media). */
+/** Featured shots for the home mosaic. */
 export const LOCAL_PROJECT_IMAGES = [
-  "/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.16.28.jpeg",
   "/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.17.29.jpeg",
-  "/img/services/tree-services/storm-damage-cleanup/WhatsApp Image 2026-08-13 at 17.16.03.jpeg",
-  "/img/services/tree-services/lot-clearing/WhatsApp Image 2026-08-13 at 17.16.27.jpeg",
-  "/img/services/tree-services/land-clearing/WhatsApp Image 2026-08-13 at 17.17.38.jpeg",
-  "/img/services/tree-services/stump-grinding/WhatsApp Image 2026-08-13 at 17.16.02.jpeg",
-  "/img/services/landscaping-property-improvements/fence-installation-repair/WhatsApp Image 2026-08-13 at 17.14.25.jpeg",
-  "/img/services/landscaping-property-improvements/fence-installation-repair/WhatsApp Image 2026-08-13 at 17.14.45.jpeg",
   "/img/services/landscaping-property-improvements/sod-installation/WhatsApp Image 2026-08-13 at 17.15.42.jpeg",
-  "/img/services/landscaping-property-improvements/mulch-installation/WhatsApp Image 2026-08-13 at 17.15.43.jpeg",
-  "/img/services/landscaping-property-improvements/flower-bed-installation/WhatsApp Image 2026-08-13 at 17.17.03 (1).jpeg",
-  "/img/services/landscaping-property-improvements/gravel-driveway-installation/WhatsApp Image 2026-08-13 at 17.17.56.jpeg",
-  "/img/services/landscaping-property-improvements/yard-cleanup/WhatsApp Image 2026-08-13 at 17.14.46.jpeg",
-  "/img/services/landscaping-property-improvements/dirt-grading-leveling/WhatsApp Image 2026-08-13 at 17.15.25.jpeg",
-  "/img/services/landscaping-property-improvements/landscape-cleanup/WhatsApp Image 2026-08-13 at 17.14.24.jpeg",
-  "/img/services/landscaping-property-improvements/sod-installation/WhatsApp Image 2026-08-13 at 17.17.57.jpeg",
+  "/img/services/landscaping-property-improvements/fence-installation-repair/WhatsApp Image 2026-08-13 at 17.14.25.jpeg",
+  "/img/services/landscaping-property-improvements/mulch-installation/WhatsApp Image 2026-08-13 at 17.13.59.jpeg",
+  "/img/services/tree-services/storm-damage-cleanup/WhatsApp Image 2026-08-13 at 17.16.03.jpeg",
+  "/img/before-after/flower-bed-stone-porch/after.jpeg",
 ];

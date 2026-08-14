@@ -41,6 +41,10 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <div className="hero__scroll" aria-hidden="true">
+          Scroll
+          <span></span>
+        </div>
       </section>
 
       <section className="section about" id="about">
@@ -64,7 +68,7 @@ export default function Home() {
           </div>
           <figure className="about__figure reveal reveal--delay-1">
             <img
-              src={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-4.jpg`}
+              src="/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.16.28.jpeg"
               alt="Tree removal services in Cleveland, TX"
               width="1000"
               height="600"
@@ -106,7 +110,8 @@ export default function Home() {
             <article
               className="service reveal"
               style={{
-                "--service-image": `url('${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-8.jpg')`,
+                "--service-image":
+                  "url('/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.17.29.jpeg')",
               }}
             >
               <div className="service__media" aria-hidden="true"></div>
@@ -122,7 +127,8 @@ export default function Home() {
             <article
               className="service reveal reveal--delay-1"
               style={{
-                "--service-image": `url('${BASE}/2024/02/High-Quality-Landscaping-Services-in-Cleveland-TX-9.jpg')`,
+                "--service-image":
+                  "url('/img/services/landscaping-property-improvements/sod-installation/WhatsApp Image 2026-08-13 at 17.15.42.jpeg')",
               }}
             >
               <div className="service__media" aria-hidden="true"></div>
@@ -138,7 +144,8 @@ export default function Home() {
             <article
               className="service reveal reveal--delay-2"
               style={{
-                "--service-image": `url('${BASE}/2024/02/Lot-Clearing-in-Cleveland-TX-2.jpg')`,
+                "--service-image":
+                  "url('/img/services/tree-services/lot-clearing/WhatsApp Image 2026-08-13 at 17.16.27.jpeg')",
               }}
             >
               <div className="service__media" aria-hidden="true"></div>
@@ -158,14 +165,18 @@ export default function Home() {
         <div
           className="band__media"
           style={{
-            backgroundImage: `url('${BASE}/2024/02/Pressure-Washing-in-Cleveland-TX-1.jpg')`,
+            backgroundImage:
+              "url('/img/services/landscaping-property-improvements/fence-installation-repair/WhatsApp Image 2026-08-13 at 17.14.25.jpeg')",
           }}
         ></div>
         <div className="band__veil"></div>
         <div className="container band__content reveal">
-          <p className="eyebrow eyebrow--light">Revitalize Your Space</p>
-          <h2>Professional cleaning that makes outdoor areas feel new again</h2>
-          <p>Elevate the cleanliness and appeal of your property with EG Tree Services LLC’s dedicated outdoor cleaning team.</p>
+          <p className="eyebrow eyebrow--light">Property Ready</p>
+          <h2>Fencing, cleanup, and outdoor upgrades that finish the job</h2>
+          <p>
+            From privacy fences to yard refresh work, EG Tree Services LLC builds clean, durable results for Cleveland
+            homes.
+          </p>
           <div className="hero__actions">
             <a className="btn btn--accent" href={PHONE_HREF}>
               Call Us Now

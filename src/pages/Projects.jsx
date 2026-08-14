@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import BeforeAfter from "../components/BeforeAfter";
 import PageHero from "../components/PageHero";
+import ProjectGallery from "../components/ProjectGallery";
 import { usePageMeta } from "../hooks/usePageMeta";
-import { LOCAL_PROJECT_IMAGES } from "../data/gallery";
+import { galleryItems } from "../data/gallery";
 
 export default function Projects() {
   usePageMeta(
@@ -37,16 +38,11 @@ export default function Projects() {
             <p className="eyebrow">Portfolio</p>
             <h2>Projects of EG Tree Services LLC</h2>
             <p>
-              Our commitment to customer satisfaction shows in every project — tree removal, trimming, stump grinding,
-              fertilization, landscaping, and lot clearing. Residential work has transformed countless Cleveland homes,
-              while commercial projects support corporate landscapes and community spaces.
+              Browse the full job gallery — tree work, landscaping, fencing, sod, and more. Click any photo to open it
+              larger.
             </p>
           </div>
-          <div className="projects__mosaic projects__mosaic--dense reveal">
-            {LOCAL_PROJECT_IMAGES.map((src) => (
-              <img key={src} src={src} alt="EG Tree Services project" loading="lazy" />
-            ))}
-          </div>
+          <ProjectGallery items={galleryItems} />
           <div className="section__cta reveal">
             <Link className="btn btn--accent" to="/contact">
               Start Your Project
