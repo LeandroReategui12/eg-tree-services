@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
 import { usePageMeta } from "../hooks/usePageMeta";
-import { BASE } from "../data/site";
 
 export default function Landscaping() {
   usePageMeta(
@@ -12,29 +11,25 @@ export default function Landscaping() {
   return (
     <>
       <PageHero
-        image={`${BASE}/2024/02/High-Quality-Landscaping-Services-in-Cleveland-TX-9.jpg`}
-        title="High Quality Landscaping in Cleveland, TX"
-        lead="Flower bed and mulch installations that create vibrant, welcoming outdoor spaces reflecting your style."
+        image="/img/services/landscaping-property-improvements/sod-installation/WhatsApp Image 2026-08-13 at 17.15.42.jpeg"
+        title="Landscaping that feels lived-in and finished"
+        lead="Flower beds, mulch, sod, and outdoor upgrades that raise curb appeal."
       />
 
       <section className="section">
         <div className="container prose-grid">
           <div className="reveal">
             <p className="eyebrow">Landscaping</p>
-            <h2>Outdoor spaces designed to look lived-in and loved</h2>
+            <h2>Beds, lawns, and details that hold together.</h2>
             <p>
-              EG Tree Services LLC specializes in landscaping details that make a lasting difference — from defining
-              flower beds to applying mulch that protects soil, retains moisture, and elevates curb appeal.
-            </p>
-            <p>
-              Whether you want a refreshed front yard or a polished commercial entrance, our team brings practical
-              design sense and clean installation workmanship.
+              From defining a flower bed to laying sod and installing fences, we focus on clean edges, healthy soil
+              coverage, and a result that matches the rest of the property.
             </p>
           </div>
           <figure className="media-frame reveal reveal--delay-1">
             <img
-              src={`${BASE}/2024/02/High-Quality-Landscaping-Services-in-Cleveland-TX-3.jpg`}
-              alt="Landscaping in Cleveland, TX"
+              src="/img/before-after/flower-bed-stone-porch/after.jpeg"
+              alt="Finished flower bed"
               loading="lazy"
             />
           </figure>
@@ -45,76 +40,45 @@ export default function Landscaping() {
         <div className="container detail-grid">
           <article className="detail reveal">
             <img
-              src={`${BASE}/2024/02/High-Quality-Landscaping-Services-in-Cleveland-TX-2.jpg`}
+              src="/img/services/landscaping-property-improvements/flower-bed-installation/WhatsApp Image 2026-08-13 at 17.16.46.jpeg"
               alt="Flower bed installation"
               loading="lazy"
             />
-            <h3>Flower Beds Installation</h3>
-            <p>
-              We create structured, colorful flower beds that frame your property and complement existing trees and
-              hardscape — built to look intentional and stay healthy.
-            </p>
+            <h3>Flower Bed Installation</h3>
+            <p>Structured beds with solid borders, ready for plants and mulch.</p>
           </article>
           <article className="detail reveal reveal--delay-1">
             <img
-              src={`${BASE}/2024/02/High-Quality-Landscaping-Services-in-Cleveland-TX-4.jpg`}
+              src="/img/services/landscaping-property-improvements/mulch-installation/WhatsApp Image 2026-08-13 at 17.15.43.jpeg"
               alt="Mulch installation"
               loading="lazy"
             />
             <h3>Mulch Installation</h3>
-            <p>
-              Professional mulch application improves soil health, reduces weeds, and gives beds a finished look.
-              Contact us to schedule mulch installation and refresh your outdoor spaces.
-            </p>
+            <p>Fresh coverage that protects soil, reduces weeds, and finishes the look.</p>
           </article>
           <article className="detail reveal reveal--delay-2">
             <img
-              src={`${BASE}/2024/02/High-Quality-Landscaping-Services-in-Cleveland-TX-1.jpg`}
-              alt="Completed landscaping project"
+              src="/img/services/landscaping-property-improvements/sod-installation/WhatsApp Image 2026-08-13 at 17.15.26.jpeg"
+              alt="Sod installation"
               loading="lazy"
             />
-            <h3>Complete Outdoor Refresh</h3>
-            <p>
-              Pair landscaping with our tree and cleaning services for a cohesive property transformation — one team,
-              one schedule, one clean result.
-            </p>
+            <h3>Sod Installation</h3>
+            <p>Graded ground and new turf for yards ready to grow in.</p>
+          </article>
+          <article className="detail reveal">
+            <img
+              src="/img/services/landscaping-property-improvements/fence-installation-repair/WhatsApp Image 2026-08-13 at 17.14.45.jpeg"
+              alt="Fence installation"
+              loading="lazy"
+            />
+            <h3>Fence Installation</h3>
+            <p>Privacy fencing and repairs that square up the property line.</p>
           </article>
         </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section__intro reveal">
-            <p className="eyebrow">Gallery</p>
-            <h2>Recent landscaping work</h2>
-          </div>
-          <div className="projects__mosaic reveal">
-            <img
-              src={`${BASE}/2024/02/High-Quality-Landscaping-Services-in-Cleveland-TX-7.jpg`}
-              alt="Landscaping project"
-              loading="lazy"
-            />
-            <img
-              src={`${BASE}/2024/02/High-Quality-Landscaping-Services-in-Cleveland-TX-5.jpg`}
-              alt="Mulched beds"
-              loading="lazy"
-            />
-            <img
-              src={`${BASE}/2024/02/High-Quality-Landscaping-Services-in-Cleveland-TX-6.jpg`}
-              alt="Outdoor landscaping"
-              loading="lazy"
-            />
-            <img
-              src={`${BASE}/2024/02/High-Quality-Landscaping-Services-in-Cleveland-TX-8.jpg`}
-              alt="Property landscaping"
-              loading="lazy"
-            />
-          </div>
-          <div className="section__cta reveal">
-            <Link className="btn btn--primary" to="/contact">
-              Request Landscaping Estimate
-            </Link>
-          </div>
+        <div className="container section__cta reveal">
+          <Link className="btn btn--primary" to="/contact">
+            Request Landscaping Estimate
+          </Link>
         </div>
       </section>
     </>

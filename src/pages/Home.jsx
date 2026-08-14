@@ -2,7 +2,29 @@ import { Link } from "react-router-dom";
 import EstimateForm from "../components/EstimateForm";
 import Testimonials from "../components/Testimonials";
 import { usePageMeta } from "../hooks/usePageMeta";
-import { BASE, EMAIL, EMAIL_HREF, HOURS, MAP_EMBED, PHONE, PHONE_HREF, SOCIALS } from "../data/site";
+import { LOCAL_PROJECT_IMAGES } from "../data/gallery";
+import { BASE, EMAIL, EMAIL_HREF, HOURS, MAP_EMBED, PHONE, PHONE_HREF } from "../data/site";
+
+const SERVICES = [
+  {
+    title: "Tree Services",
+    text: "Removal, trimming, stump grinding, and fertilization — handled safely for homes and businesses.",
+    to: "/tree-services",
+    image: "/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.17.29.jpeg",
+  },
+  {
+    title: "Landscaping",
+    text: "Flower beds, mulch, sod, and outdoor upgrades that make a property feel finished.",
+    to: "/landscaping",
+    image: "/img/services/landscaping-property-improvements/sod-installation/WhatsApp Image 2026-08-13 at 17.15.42.jpeg",
+  },
+  {
+    title: "Lot Clearing",
+    text: "Clear overgrowth, recover from storms, and prepare land for what comes next.",
+    to: "/lot-clearing",
+    image: "/img/services/tree-services/lot-clearing/WhatsApp Image 2026-08-13 at 17.16.27.jpeg",
+  },
+];
 
 export default function Home() {
   usePageMeta(
@@ -19,18 +41,16 @@ export default function Home() {
           muted
           loop
           playsInline
-          poster={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-4.jpg`}
+          poster="/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.16.28.jpeg"
         >
           <source src={`${BASE}/2024/02/EG-Tree-Services-LLC-Video.mp4`} type="video/mp4" />
         </video>
         <div className="hero__veil"></div>
-
         <div className="container hero__content">
           <p className="hero__brand reveal">EG Tree Services LLC</p>
           <h1 className="reveal reveal--delay-1">Tree care built for Cleveland properties.</h1>
           <p className="hero__lead reveal reveal--delay-2">
-            Removal, trimming, stump grinding, and fertilization — done safely for homes and businesses across East
-            Texas.
+            Safe removal, clean finishes, and outdoor work across East Texas — available 24/7.
           </p>
           <div className="hero__actions reveal reveal--delay-3">
             <Link className="btn btn--accent" to="/contact">
@@ -41,57 +61,28 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="hero__scroll" aria-hidden="true">
-          Scroll
-          <span></span>
-        </div>
       </section>
 
-      <section className="section about" id="about">
+      <section className="section about">
         <div className="container about__grid">
           <div className="about__copy reveal">
             <p className="eyebrow">About Us</p>
-            <h2>Your premier destination for top-notch tree care in Cleveland, TX.</h2>
+            <h2>Fifteen years of outdoor craft in Cleveland, TX.</h2>
             <p>
-              Welcome to EG Tree Services LLC. With a commitment to excellence and a passion for arboriculture, our team
-              provides unparalleled tree care for residential and commercial clients — including tree removal, tree
-              trimming, stump grinding, and tree fertilization.
+              EG Tree Services LLC brings arborists, landscapers, and clearing crews under one team — so your property
+              gets careful work, less disruption, and a finish you can live with.
             </p>
-            <p>
-              Our expert arborists handle every job with precision, prioritizing safety and minimizing disruption to
-              your property. Over 15 years of experience means proven techniques, clean finishes, and trees that stay
-              healthier longer.
-            </p>
-            <Link className="text-link" to="/services">
-              Explore our services
+            <Link className="text-link" to="/about">
+              Meet the company
             </Link>
           </div>
           <figure className="about__figure reveal reveal--delay-1">
             <img
-              src="/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.16.28.jpeg"
-              alt="Tree removal services in Cleveland, TX"
-              width="1000"
-              height="600"
+              src="/img/services/landscaping-property-improvements/flower-bed-installation/WhatsApp Image 2026-08-13 at 17.17.03.jpeg"
+              alt="EG Tree Services landscaping work"
               loading="lazy"
             />
           </figure>
-        </div>
-      </section>
-
-      <section className="urgency">
-        <div className="container urgency__inner reveal">
-          <div>
-            <h2>Urgent tree or landscaping concern?</h2>
-            <p>Don’t wait. EG Tree Services LLC is here 24/7 — ready to respond promptly and protect your property.</p>
-          </div>
-          <div className="urgency__actions">
-            <Link className="btn btn--accent" to="/contact">
-              Free Estimate
-            </Link>
-            <a className="btn btn--dark" href={PHONE_HREF}>
-              Call Us Now
-            </a>
-          </div>
         </div>
       </section>
 
@@ -99,126 +90,68 @@ export default function Home() {
         <div className="container">
           <div className="section__intro reveal">
             <p className="eyebrow">What We Offer</p>
-            <h2>Top-notch outdoor services for homes and businesses</h2>
-            <p>
-              With over 15 years of experience, EG Tree Services LLC delivers comprehensive solutions across Cleveland,
-              Texas and surrounding areas within 60 miles.
-            </p>
+            <h2>Outdoor services that leave the property ready.</h2>
           </div>
-
-          <div className="services__list">
-            <article
-              className="service reveal"
-              style={{
-                "--service-image":
-                  "url('/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.17.29.jpeg')",
-              }}
-            >
-              <div className="service__media" aria-hidden="true"></div>
-              <div className="service__body">
-                <h3>Tree Services</h3>
-                <p>Precise trimming, safe removal, fertilization to boost growth, and stump grinding for a clean finish.</p>
-                <Link className="text-link" to="/tree-services">
-                  Find out more
-                </Link>
-              </div>
-            </article>
-
-            <article
-              className="service reveal reveal--delay-1"
-              style={{
-                "--service-image":
-                  "url('/img/services/landscaping-property-improvements/sod-installation/WhatsApp Image 2026-08-13 at 17.15.42.jpeg')",
-              }}
-            >
-              <div className="service__media" aria-hidden="true"></div>
-              <div className="service__body">
-                <h3>Landscaping Services</h3>
-                <p>Bedflower and mulch installations that create vibrant outdoor spaces reflecting your style.</p>
-                <Link className="text-link" to="/landscaping">
-                  Find out more
-                </Link>
-              </div>
-            </article>
-
-            <article
-              className="service reveal reveal--delay-2"
-              style={{
-                "--service-image":
-                  "url('/img/services/tree-services/lot-clearing/WhatsApp Image 2026-08-13 at 17.16.27.jpeg')",
-              }}
-            >
-              <div className="service__media" aria-hidden="true"></div>
-              <div className="service__body">
-                <h3>Lot Clearing Services</h3>
-                <p>Clear overgrowth and prepare land efficiently so your property is ready for its next chapter.</p>
-                <Link className="text-link" to="/lot-clearing">
-                  Find out more
-                </Link>
-              </div>
-            </article>
+          <div className="service-stack">
+            {SERVICES.map((service, index) => (
+              <article
+                key={service.to}
+                className={`service-row reveal${index % 2 ? " service-row--flip" : ""}`}
+                style={{ "--service-image": `url('${service.image}')` }}
+              >
+                <div className="service-row__media" aria-hidden="true"></div>
+                <div className="service-row__body">
+                  <h3>{service.title}</h3>
+                  <p>{service.text}</p>
+                  <Link className="text-link" to={service.to}>
+                    Explore {service.title.toLowerCase()}
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="band">
-        <div
-          className="band__media"
-          style={{
-            backgroundImage:
-              "url('/img/services/landscaping-property-improvements/fence-installation-repair/WhatsApp Image 2026-08-13 at 17.14.25.jpeg')",
-          }}
-        ></div>
-        <div className="band__veil"></div>
-        <div className="container band__content reveal">
-          <p className="eyebrow eyebrow--light">Property Ready</p>
-          <h2>Fencing, cleanup, and outdoor upgrades that finish the job</h2>
-          <p>
-            From privacy fences to yard refresh work, EG Tree Services LLC builds clean, durable results for Cleveland
-            homes.
-          </p>
-          <div className="hero__actions">
+      <section className="urgency">
+        <div className="container urgency__inner reveal">
+          <div>
+            <h2>Need help tonight?</h2>
+            <p>Storm damage, hazardous limbs, or an urgent clearing job — EG answers around the clock.</p>
+          </div>
+          <div className="urgency__actions">
             <a className="btn btn--accent" href={PHONE_HREF}>
-              Call Us Now
+              Call {PHONE}
             </a>
-            <Link className="btn btn--ghost" to="/contact">
-              Free Estimate
+            <Link className="btn btn--ghost-dark" to="/contact">
+              Request Estimate
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="section why" id="why-us">
+      <section className="section why">
         <div className="container">
           <div className="section__intro reveal">
-            <p className="eyebrow">Why Choose Us</p>
-            <h2>Reasons clients trust EG Tree Services LLC</h2>
+            <p className="eyebrow">Why EG</p>
+            <h2>What property owners count on.</h2>
           </div>
-
-          <ul className="why__grid">
+          <ul className="why__list">
             <li className="reveal">
-              <strong>15+ Years Experience</strong>
-              <span>Unparalleled expertise on every residential and commercial project.</span>
+              <strong>15+ years</strong>
+              <span>Proven methods on residential and commercial sites.</span>
             </li>
             <li className="reveal reveal--delay-1">
-              <strong>Comprehensive Services</strong>
-              <span>Tree care, landscaping, lot clearing, and outdoor cleaning under one team.</span>
+              <strong>Insured crew</strong>
+              <span>Safety for workers, neighbors, and your structures.</span>
             </li>
             <li className="reveal reveal--delay-2">
-              <strong>Insured</strong>
-              <span>Committed to excellence, safety, and security for employees and customers.</span>
+              <strong>60-mile reach</strong>
+              <span>Cleveland, TX and the surrounding East Texas towns.</span>
             </li>
             <li className="reveal">
-              <strong>Quality Workmanship</strong>
-              <span>State-of-the-art equipment and proven techniques for a clean finish.</span>
-            </li>
-            <li className="reveal reveal--delay-1">
-              <strong>60-Mile Coverage</strong>
-              <span>Serving Cleveland, Texas and communities across the surrounding region.</span>
-            </li>
-            <li className="reveal reveal--delay-2">
-              <strong>24/7 Availability</strong>
-              <span>Emergency tree and landscaping response whenever you need us.</span>
+              <strong>24/7 response</strong>
+              <span>Emergency tree and outdoor help when weather hits.</span>
             </li>
           </ul>
         </div>
@@ -226,53 +159,20 @@ export default function Home() {
 
       <Testimonials />
 
-      <section className="section projects" id="projects">
+      <section className="section projects">
         <div className="container">
           <div className="section__intro reveal">
-            <p className="eyebrow">Our Projects</p>
-            <h2>See our tree services projects</h2>
-            <p>
-              From residential transformations to commercial enhancements, our portfolio reflects the expertise and
-              dedication we bring to every job in Cleveland, TX.
-            </p>
+            <p className="eyebrow">Projects</p>
+            <h2>Recent work across Cleveland yards.</h2>
           </div>
-
-          <div className="projects__mosaic reveal">
-            <img
-              src="/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.17.29.jpeg"
-              alt="Tree removal project in Cleveland, TX"
-              loading="lazy"
-            />
-            <img
-              src="/img/services/landscaping-property-improvements/sod-installation/WhatsApp Image 2026-08-13 at 17.15.42.jpeg"
-              alt="Sod installation project"
-              loading="lazy"
-            />
-            <img
-              src="/img/services/landscaping-property-improvements/fence-installation-repair/WhatsApp Image 2026-08-13 at 17.14.25.jpeg"
-              alt="Fence installation project"
-              loading="lazy"
-            />
-            <img
-              src="/img/services/landscaping-property-improvements/mulch-installation/WhatsApp Image 2026-08-13 at 17.13.59.jpeg"
-              alt="Mulch and flower bed project"
-              loading="lazy"
-            />
-            <img
-              src="/img/services/tree-services/storm-damage-cleanup/WhatsApp Image 2026-08-13 at 17.16.03.jpeg"
-              alt="Storm damage cleanup"
-              loading="lazy"
-            />
-            <img
-              src="/img/before-after/flower-bed-stone-porch/after.jpeg"
-              alt="Finished flower bed project"
-              loading="lazy"
-            />
+          <div className="strip-gallery reveal">
+            {LOCAL_PROJECT_IMAGES.map((src) => (
+              <img key={src} src={src} alt="EG Tree Services project" loading="lazy" />
+            ))}
           </div>
-
           <div className="section__cta reveal">
             <Link className="btn btn--primary" to="/projects">
-              See More Projects
+              Open full gallery
             </Link>
           </div>
         </div>
@@ -282,10 +182,10 @@ export default function Home() {
         <div className="container coverage__grid">
           <div className="coverage__copy reveal">
             <p className="eyebrow">Service Area</p>
-            <h2>Area we cover</h2>
+            <h2>Based in Cleveland. Working the region.</h2>
             <p>
-              Based in Cleveland, Texas 77328, we serve clients within roughly 60 miles — bringing reliable tree care,
-              landscaping, and lot clearing across the region.
+              From zip 77328 we cover roughly sixty miles — tree care, landscaping, and lot clearing for homes and
+              commercial properties.
             </p>
             <ul className="coverage__facts">
               <li>
@@ -298,13 +198,6 @@ export default function Home() {
                 <strong>Hours</strong> {HOURS}
               </li>
             </ul>
-            <div className="socials">
-              {SOCIALS.map((social) => (
-                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer">
-                  {social.label}
-                </a>
-              ))}
-            </div>
           </div>
           <div className="coverage__map reveal reveal--delay-1">
             <iframe
@@ -321,11 +214,11 @@ export default function Home() {
       <section className="section contact" id="contact">
         <div className="container contact__grid">
           <div className="contact__copy reveal">
-            <p className="eyebrow">Get a Free Estimate</p>
-            <h2>Contact us for affordable tree care solutions</h2>
+            <p className="eyebrow">Free Estimate</p>
+            <h2>Tell us about the property.</h2>
             <p>
-              Transparent pricing, exceptional value, and professional results — from tree removal and trimming to stump
-              grinding and fertilization. Tell us about your property and we’ll get back with a personalized quote.
+              Share the address, the job, and the best number to reach you. We’ll follow up with a clear quote — or call
+              us anytime at {PHONE}.
             </p>
           </div>
           <EstimateForm />

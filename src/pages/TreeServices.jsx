@@ -1,7 +1,30 @@
 import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
 import { usePageMeta } from "../hooks/usePageMeta";
-import { BASE, PHONE_HREF } from "../data/site";
+import { PHONE_HREF } from "../data/site";
+
+const DETAILS = [
+  {
+    title: "Tree Removal",
+    text: "Assessed, planned, and executed so nearby structures and landscaping stay protected.",
+    image: "/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.16.28.jpeg",
+  },
+  {
+    title: "Tree Trimming",
+    text: "Health, shape, and clearance cuts that reduce hazards and keep canopies strong.",
+    image: "/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.17.29.jpeg",
+  },
+  {
+    title: "Stump Grinding",
+    text: "A clean finish after removal so the yard becomes usable again.",
+    image: "/img/services/tree-services/stump-grinding/WhatsApp Image 2026-08-13 at 17.16.02.jpeg",
+  },
+  {
+    title: "Storm Damage Cleanup",
+    text: "Fallen limbs and hazardous trees cleared quickly when weather hits.",
+    image: "/img/services/tree-services/storm-damage-cleanup/WhatsApp Image 2026-08-13 at 17.16.03.jpeg",
+  },
+];
 
 export default function TreeServices() {
   usePageMeta(
@@ -12,29 +35,25 @@ export default function TreeServices() {
   return (
     <>
       <PageHero
-        image={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-4.jpg`}
-        title="Top Rated Tree Services in Cleveland, TX"
-        lead="Expert arborists delivering safe removal, precise trimming, stump grinding, and fertilization for residential and commercial properties."
+        image="/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.17.29.jpeg"
+        title="Tree services done with precision"
+        lead="Safe removal, careful trimming, stump grinding, and storm response for Cleveland properties."
       />
 
       <section className="section">
         <div className="container prose-grid">
           <div className="reveal">
             <p className="eyebrow">Tree Care</p>
-            <h2>Tree services by EG Tree Services LLC</h2>
+            <h2>Arborists who prioritize safety and a clean finish.</h2>
             <p>
-              Welcome to EG Tree Services LLC, your top-rated destination for professional tree services in Cleveland,
-              TX. Transform your outdoor space with tree removal, tree trimming, stump grinding, and tree fertilization.
-            </p>
-            <p>
-              Our expert arborists handle every job with precision — prioritizing safety, minimizing disruption, and
-              promoting long-term tree health and vitality.
+              Every job starts with the tree, the structures around it, and how you use the property. We plan the cut,
+              protect what stays, and leave the site orderly.
             </p>
           </div>
           <figure className="media-frame reveal reveal--delay-1">
             <img
-              src={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-5.jpg`}
-              alt="Tree trimming in Cleveland, TX"
+              src="/img/services/tree-services/land-clearing/WhatsApp Image 2026-08-13 at 17.17.38.jpeg"
+              alt="Tree clearing equipment"
               loading="lazy"
             />
           </figure>
@@ -44,58 +63,17 @@ export default function TreeServices() {
       <section className="section section--soft">
         <div className="container">
           <div className="section__intro reveal">
-            <p className="eyebrow">Our Tree Services</p>
-            <h2>Specialized care for every stage of the job</h2>
+            <p className="eyebrow">Services</p>
+            <h2>Specialized care for every stage.</h2>
           </div>
           <div className="detail-grid">
-            <article className="detail reveal">
-              <img
-                src={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-9.jpg`}
-                alt="Tree removal"
-                loading="lazy"
-              />
-              <h3>Tree Removal Services</h3>
-              <p>
-                Careful planning and execution from assessment through cleanup. We consider tree health, size, and
-                proximity to structures to remove trees safely while protecting your property.
-              </p>
-            </article>
-            <article className="detail reveal reveal--delay-1">
-              <img
-                src={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-6.jpg`}
-                alt="Tree trimming"
-                loading="lazy"
-              />
-              <h3>Tree Trimming Services</h3>
-              <p>
-                Routine trimming enhances tree health, shape, and aesthetics — reducing hazards and helping trees thrive
-                season after season.
-              </p>
-            </article>
-            <article className="detail reveal reveal--delay-2">
-              <img
-                src={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-7.jpg`}
-                alt="Stump grinding"
-                loading="lazy"
-              />
-              <h3>Stump Grinding Services</h3>
-              <p>
-                After removal, stump grinding delivers a clean, polished finish so you can reclaim usable yard space
-                without leftover obstacles.
-              </p>
-            </article>
-            <article className="detail reveal">
-              <img
-                src={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-10.jpg`}
-                alt="Tree fertilization"
-                loading="lazy"
-              />
-              <h3>Tree Fertilization Services</h3>
-              <p>
-                Targeted fertilization promotes long-term health and vitality, giving your trees the nutrients they need
-                to grow stronger.
-              </p>
-            </article>
+            {DETAILS.map((item, index) => (
+              <article key={item.title} className={`detail reveal${index % 3 === 1 ? " reveal--delay-1" : index % 3 === 2 ? " reveal--delay-2" : ""}`}>
+                <img src={item.image} alt={item.title} loading="lazy" />
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -103,14 +81,14 @@ export default function TreeServices() {
       <section className="urgency">
         <div className="container urgency__inner reveal">
           <div>
-            <h2>Ready to elevate your property’s greenery?</h2>
-            <p>Trust EG Tree Services for quality, safety, and customer satisfaction in Cleveland, TX.</p>
+            <h2>Ready to elevate the greenery?</h2>
+            <p>Quality, safety, and clear communication on every Cleveland tree job.</p>
           </div>
           <div className="urgency__actions">
             <Link className="btn btn--accent" to="/contact">
               Free Estimate
             </Link>
-            <a className="btn btn--dark" href={PHONE_HREF}>
+            <a className="btn btn--ghost-dark" href={PHONE_HREF}>
               Call Us Now
             </a>
           </div>

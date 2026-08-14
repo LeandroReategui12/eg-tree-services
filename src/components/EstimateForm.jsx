@@ -30,14 +30,14 @@ export default function EstimateForm() {
       </label>
       <label className="contact__full">
         Message
-        <textarea name="message" rows="5" required></textarea>
+        <textarea name="message" rows="5" required placeholder="Property address, job details, preferred timing…"></textarea>
       </label>
       <button className="btn btn--accent contact__full" type="submit">
         Send Request
       </button>
       {sent ? (
         <p className="form-note contact__full">
-          Thanks — open your email app to finish sending, or call us at {PHONE}.
+          Thanks — finish in your email app, or call us at {PHONE}.
         </p>
       ) : null}
     </form>

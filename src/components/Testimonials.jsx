@@ -7,7 +7,7 @@ export default function Testimonials() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((current) => (current + 1) % TESTIMONIALS.length);
-    }, 6500);
+    }, 7000);
     return () => clearInterval(timer);
   }, [index]);
 
@@ -15,8 +15,8 @@ export default function Testimonials() {
     <section className="section testimonials">
       <div className="container">
         <div className="section__intro reveal">
-          <p className="eyebrow">Testimonials</p>
-          <h2>What customers say about our work</h2>
+          <p className="eyebrow eyebrow--light">Testimonials</p>
+          <h2>Neighbors talk about the cleanup.</h2>
         </div>
 
         <div className="testimonials__track">
@@ -24,7 +24,8 @@ export default function Testimonials() {
             <blockquote key={item.name} className={`quote${i === index ? " is-active" : ""}`}>
               <p>“{item.quote}”</p>
               <cite>
-                {item.name} <span>Customer</span>
+                {item.name}
+                <span>Customer</span>
               </cite>
             </blockquote>
           ))}
@@ -36,14 +37,14 @@ export default function Testimonials() {
             aria-label="Previous testimonial"
             onClick={() => setIndex((current) => (current - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)}
           >
-            ‹
+            Prev
           </button>
           <button
             type="button"
             aria-label="Next testimonial"
             onClick={() => setIndex((current) => (current + 1) % TESTIMONIALS.length)}
           >
-            ›
+            Next
           </button>
         </div>
       </div>

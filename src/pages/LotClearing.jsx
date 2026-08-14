@@ -1,6 +1,5 @@
 import PageHero from "../components/PageHero";
 import { usePageMeta } from "../hooks/usePageMeta";
-import { BASE } from "../data/site";
 
 export default function LotClearing() {
   usePageMeta(
@@ -11,30 +10,25 @@ export default function LotClearing() {
   return (
     <>
       <PageHero
-        image={`${BASE}/2024/02/Lot-Clearing-in-Cleveland-TX-2.jpg`}
-        title="Professional Lot Clearing in Cleveland, TX"
-        lead="Clear overgrowth, recover from storm damage, and restore outdoor surfaces with a team focused on safety and clean results."
+        image="/img/services/tree-services/lot-clearing/WhatsApp Image 2026-08-13 at 17.16.27.jpeg"
+        title="Lot clearing with a clean finish"
+        lead="Clear overgrowth, recover from storms, and open land for building or landscaping."
       />
 
       <section className="section">
         <div className="container prose-grid">
           <div className="reveal">
             <p className="eyebrow">Lot Clearing</p>
-            <h2>Lot clearing services by EG Tree Services LLC</h2>
+            <h2>From overgrown to construction-ready.</h2>
             <p>
-              EG Tree Services LLC is a trusted name in Cleveland, TX for quality, reliability, and customer
-              satisfaction. Our lot clearing services prepare land for construction, improve curb appeal, and transform
-              neglected spaces into clean, usable property.
-            </p>
-            <p>
-              Certified arborists and skilled professionals prioritize safety, environmental responsibility, and tailored
-              solutions for every residential and commercial project.
+              We remove trees, brush, and debris with attention to surrounding landscape and safe equipment use — ideal
+              for new builds, curb appeal, and reclaiming unused ground.
             </p>
           </div>
           <figure className="media-frame reveal reveal--delay-1">
             <img
-              src={`${BASE}/2024/02/Lot-Clearing-in-Cleveland-TX-1.jpg`}
-              alt="Lot clearing in Cleveland, TX"
+              src="/img/services/tree-services/land-clearing/WhatsApp Image 2026-08-13 at 17.17.38.jpeg"
+              alt="Lot clearing machine"
               loading="lazy"
             />
           </figure>
@@ -45,77 +39,37 @@ export default function LotClearing() {
         <div className="container">
           <div className="section__intro reveal">
             <p className="eyebrow">What We Handle</p>
-            <h2>Clearing, storm recovery, and surface cleaning</h2>
+            <h2>Clearing, storm recovery, and haul-off.</h2>
           </div>
           <div className="detail-grid">
             <article className="detail reveal">
               <img
-                src={`${BASE}/2024/02/Cleaning-damage-tree-by-storm-1.jpg`}
+                src="/img/services/tree-services/storm-damage-cleanup/WhatsApp Image 2026-08-13 at 17.16.03.jpeg"
                 alt="Storm damage cleanup"
                 loading="lazy"
               />
-              <h3>Storm Damage Tree Cleaning</h3>
-              <p>
-                When severe weather hits, we assess hazardous branches, remove fallen limbs and debris, and restore
-                safety and aesthetics quickly — with preventative measures that protect trees going forward.
-              </p>
+              <h3>Storm Damage Cleanup</h3>
+              <p>Hazardous limbs and fallen trees cleared so the property is safe again.</p>
             </article>
             <article className="detail reveal reveal--delay-1">
-              <img src={`${BASE}/2024/02/Lot-Clearing-in-Cleveland-TX-2.jpg`} alt="Lot clearing" loading="lazy" />
-              <h3>Lot Clearing Services</h3>
-              <p>
-                We systematically remove trees, vegetation, and debris, dispose of materials responsibly, and preserve
-                surrounding landscape integrity — ideal for new builds, curb appeal, and reclaiming unused space.
-              </p>
+              <img
+                src="/img/services/tree-services/lot-clearing/WhatsApp Image 2026-08-13 at 17.16.27.jpeg"
+                alt="Lot clearing"
+                loading="lazy"
+              />
+              <h3>Lot & Brush Clearing</h3>
+              <p>Systematic removal and responsible disposal for residential and commercial lots.</p>
             </article>
             <article className="detail reveal reveal--delay-2">
               <img
-                src={`${BASE}/2024/02/Pressure-Washing-in-Cleveland-TX-1.jpg`}
-                alt="Pressure washing"
+                src="/img/services/landscaping-property-improvements/dirt-grading-leveling/WhatsApp Image 2026-08-13 at 17.15.05.jpeg"
+                alt="Dirt grading"
                 loading="lazy"
               />
-              <h3>Pressure Washing Services</h3>
-              <p>
-                Restore driveways, walkways, and outdoor surfaces by removing dirt, mold, and stubborn stains with
-                equipment calibrated for each material.
-              </p>
+              <h3>Dirt Grading</h3>
+              <p>Level ground prep that sets up sod, landscaping, or the next build phase.</p>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section__intro reveal">
-            <p className="eyebrow">Benefits</p>
-            <h2>Why property owners clear with EG</h2>
-          </div>
-          <ul className="why__grid">
-            <li className="reveal">
-              <strong>Construction Ready</strong>
-              <span>Create a clean slate for new building projects.</span>
-            </li>
-            <li className="reveal reveal--delay-1">
-              <strong>Curb Appeal</strong>
-              <span>Clear overgrowth that hides your property’s best features.</span>
-            </li>
-            <li className="reveal reveal--delay-2">
-              <strong>Wildfire Risk Reduction</strong>
-              <span>Remove dead vegetation and excess fuel sources.</span>
-            </li>
-            <li className="reveal">
-              <strong>Usable Space</strong>
-              <span>Turn neglected areas into gardens, recreation, or landscaping.</span>
-            </li>
-            <li className="reveal reveal--delay-1">
-              <strong>Soil Health</strong>
-              <span>Minimize unnecessary disruption for future planting.</span>
-            </li>
-            <li className="reveal reveal--delay-2">
-              <strong>Property Value</strong>
-              <span>A maintained lot is more attractive to buyers.</span>
-            </li>
-          </ul>
         </div>
       </section>
     </>

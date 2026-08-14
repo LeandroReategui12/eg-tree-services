@@ -15,18 +15,16 @@ export default function Projects() {
     <>
       <PageHero
         image="/img/services/landscaping-property-improvements/sod-installation/WhatsApp Image 2026-08-13 at 17.15.42.jpeg"
-        title="Most Demanded Tree Services Projects"
-        lead="Residential transformations and commercial enhancements that show our expertise across Cleveland, TX."
+        title="Work that shows in the yard"
+        lead="Real Cleveland jobs — tree work, landscaping, fencing, sod, and clearing."
       />
 
       <section className="section section--soft">
         <div className="container">
           <div className="section__intro reveal">
             <p className="eyebrow">Results</p>
-            <h2>Before & after from real jobs</h2>
-            <p>
-              A few clear transformations from recent EG Tree Services work — flower beds, mulch, and sod installation.
-            </p>
+            <h2>Before & after</h2>
+            <p>Clear transformations from flower beds, mulch, and sod installs.</p>
           </div>
           <BeforeAfter />
         </div>
@@ -36,11 +34,8 @@ export default function Projects() {
         <div className="container">
           <div className="section__intro reveal">
             <p className="eyebrow">Portfolio</p>
-            <h2>Projects of EG Tree Services LLC</h2>
-            <p>
-              Browse the full job gallery — tree work, landscaping, fencing, sod, and more. Click any photo to open it
-              larger.
-            </p>
+            <h2>Full project gallery</h2>
+            <p>Filter by work type and open any photo larger.</p>
           </div>
           <ProjectGallery items={galleryItems} />
           <div className="section__cta reveal">
