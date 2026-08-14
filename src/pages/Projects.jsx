@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
+import BeforeAfter from "../components/BeforeAfter";
 import PageHero from "../components/PageHero";
 import { usePageMeta } from "../hooks/usePageMeta";
-import { BASE, PROJECT_GALLERY } from "../data/site";
+import { LOCAL_PROJECT_IMAGES } from "../data/gallery";
 
 export default function Projects() {
   usePageMeta(
@@ -12,10 +13,23 @@ export default function Projects() {
   return (
     <>
       <PageHero
-        image={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-14.jpg`}
+        image="/img/services/landscaping-property-improvements/sod-installation/WhatsApp Image 2026-08-13 at 17.15.42.jpeg"
         title="Most Demanded Tree Services Projects"
         lead="Residential transformations and commercial enhancements that show our expertise across Cleveland, TX."
       />
+
+      <section className="section section--soft">
+        <div className="container">
+          <div className="section__intro reveal">
+            <p className="eyebrow">Results</p>
+            <h2>Before & after from real jobs</h2>
+            <p>
+              A few clear transformations from recent EG Tree Services work — flower beds, mulch, and sod installation.
+            </p>
+          </div>
+          <BeforeAfter />
+        </div>
+      </section>
 
       <section className="section">
         <div className="container">
@@ -29,7 +43,7 @@ export default function Projects() {
             </p>
           </div>
           <div className="projects__mosaic projects__mosaic--dense reveal">
-            {PROJECT_GALLERY.map((src) => (
+            {LOCAL_PROJECT_IMAGES.map((src) => (
               <img key={src} src={src} alt="EG Tree Services project" loading="lazy" />
             ))}
           </div>

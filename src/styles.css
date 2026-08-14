@@ -1182,6 +1182,69 @@ p {
   }
 }
 
+.before-after {
+  display: grid;
+  gap: 2rem;
+}
+
+.before-after__card {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.35rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(20, 38, 28, 0.05);
+}
+
+.before-after__copy h3 {
+  margin-bottom: 0.4rem;
+}
+
+.before-after__copy p:last-child {
+  margin-bottom: 0;
+  max-width: 42rem;
+}
+
+.before-after__pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.before-after__pair figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.before-after__pair img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.before-after__pair figcaption {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.35rem 0.7rem;
+  background: rgba(20, 38, 28, 0.82);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 640px) {
+  .before-after__pair {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

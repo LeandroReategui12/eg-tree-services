@@ -228,33 +228,33 @@ export default function Home() {
 
           <div className="projects__mosaic reveal">
             <img
-              src={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-9.jpg`}
-              alt="Tree service project in Cleveland, TX"
+              src="/img/services/tree-services/tree-removal/WhatsApp Image 2026-08-13 at 17.17.29.jpeg"
+              alt="Tree removal project in Cleveland, TX"
               loading="lazy"
             />
             <img
-              src={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-7.jpg`}
-              alt="Stump grinding project"
+              src="/img/services/landscaping-property-improvements/sod-installation/WhatsApp Image 2026-08-13 at 17.15.42.jpeg"
+              alt="Sod installation project"
               loading="lazy"
             />
             <img
-              src={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-6.jpg`}
-              alt="Tree removal project"
+              src="/img/services/landscaping-property-improvements/fence-installation-repair/WhatsApp Image 2026-08-13 at 17.14.25.jpeg"
+              alt="Fence installation project"
               loading="lazy"
             />
             <img
-              src={`${BASE}/2024/02/Top-Rated-Tree-Services-in-Cleveland-TX-5.jpg`}
-              alt="Tree trimming project"
+              src="/img/services/landscaping-property-improvements/mulch-installation/WhatsApp Image 2026-08-13 at 17.13.59.jpeg"
+              alt="Mulch and flower bed project"
               loading="lazy"
             />
             <img
-              src={`${BASE}/2024/02/High-Quality-Landscaping-Services-in-Cleveland-TX-2.jpg`}
-              alt="Landscaping project"
+              src="/img/services/tree-services/storm-damage-cleanup/WhatsApp Image 2026-08-13 at 17.16.03.jpeg"
+              alt="Storm damage cleanup"
               loading="lazy"
             />
             <img
-              src={`${BASE}/2024/02/Lot-Clearing-in-Cleveland-TX-2.jpg`}
-              alt="Lot clearing project"
+              src="/img/before-after/flower-bed-stone-porch/after.jpeg"
+              alt="Finished flower bed project"
               loading="lazy"
             />
           </div>
