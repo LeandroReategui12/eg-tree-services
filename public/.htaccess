@@ -1,7 +1,0 @@
-# Same rules for hosts that deploy the Vite `dist/` / `public/` folder
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteCond %{HTTP_HOST} !^eg-tree-services-ten\.vercel\.app$ [NC]
-RewriteRule ^(.*)$ https://eg-tree-services-ten.vercel.app/$1 [R=302,L,QSA]
-</IfModule>
