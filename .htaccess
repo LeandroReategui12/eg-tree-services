@@ -1,16 +1,19 @@
-# Proxy this domain to the Vercel app without changing the URL in the browser.
-# Requires Apache modules: rewrite, proxy, proxy_http, ssl
-# (Shared hosts sometimes block the [P] flag — ask hosting if proxy is allowed.)
+# Put this file in the DOCUMENT ROOT of the OLD site
+# (same folder as the old index.php / index.html).
+# Place these rules ABOVE any "# BEGIN WordPress" block.
 
-SSLProxyEngine On
+<IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteBase /
 
-# Avoid proxy loops
+# Do not redirect the Vercel host itself
 RewriteCond %{HTTP_HOST} !^eg-tree-services-ten\.vercel\.app$ [NC]
 
-# Forward every path + query string to Vercel
-RewriteRule ^(.*)$ https://eg-tree-services-ten.vercel.app/$1 [P,L,QSA]
+# Send every request to the new Vercel site
+RewriteRule ^(.*)$ https://eg-tree-services-ten.vercel.app/$1 [R=302,L,QSA]
+</IfModule>
 
-# Rewrite Location headers from the backend back to this domain
-ProxyPassReverse / https://eg-tree-services-ten.vercel.app/
-ProxyPassReverse / http://eg-tree-services-ten.vercel.app/
+# Fallback if mod_rewrite is off
+<IfModule !mod_rewrite.c>
+Redirect 302 / https://eg-tree-services-ten.vercel.app/
+</IfModule>
