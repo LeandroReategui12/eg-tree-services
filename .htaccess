@@ -1,0 +1,16 @@
+# Proxy this domain to the Vercel app without changing the URL in the browser.
+# Requires Apache modules: rewrite, proxy, proxy_http, ssl
+# (Shared hosts sometimes block the [P] flag — ask hosting if proxy is allowed.)
+
+SSLProxyEngine On
+RewriteEngine On
+
+# Avoid proxy loops
+RewriteCond %{HTTP_HOST} !^eg-tree-services-ten\.vercel\.app$ [NC]
+
+# Forward every path + query string to Vercel
+RewriteRule ^(.*)$ https://eg-tree-services-ten.vercel.app/$1 [P,L,QSA]
+
+# Rewrite Location headers from the backend back to this domain
+ProxyPassReverse / https://eg-tree-services-ten.vercel.app/
+ProxyPassReverse / http://eg-tree-services-ten.vercel.app/
